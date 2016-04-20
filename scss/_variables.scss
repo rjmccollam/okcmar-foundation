@@ -1,0 +1,49 @@
+/*    Fonts
+-------------------------------------------------------------- */
+$primary-font: "aktiv-grotesk", helvetica, arial, sans-serif;
+$secondary-font: "Bitter", verdana, tahoma, sans-serif;
+
+
+/*    Colors
+-------------------------------------------------------------- */
+
+// General
+$black: #000;
+$white: #fff;
+$bg: $white;
+
+// Colors
+$blue: #1c3f95;
+$blue-2: #3f67c8;
+$light-blue: #a1b8f0;
+$orange: #f39c12;
+$orange-2: #ffa81f;
+$grey: #525356;
+$light-grey: #f2f4f7;
+$light-grey-2: #d8dbe0;
+$light-grey-3: #eaeef6;
+
+// Typography
+$text-color: #27282c; // used for main body text
+$h1: $blue; // used for <h1>'s
+$h2: $orange; // used for <h2>'s
+$h3: $grey; // used for <h3>'s
+$link: #3057b5; // main link color
+$link-hover: #7c96d5; // main link hover color
+
+
+
+/*    Units
+-------------------------------------------------------------- */
+
+// Typography
+$font-size: 1rem; // used for main body text
+$line-height: 2rem; // used for line-height on main body text
+$h1-size: 3.75rem; // used for size of content <h1>
+$h2-size: 2.5rem; // used for size of content <h2>
+$h3-size: 1.25rem; // used for size of content <h3>
+
+// Breakpoints
+$large-bp: 1300px;
+$med-bp: 1000px;
+$small-bp: 700px;

@@ -1,0 +1,277 @@
+/*!
+	Theme Name: OKCMAR Foundation
+	Author: Forge Multimedia
+	Description: A custom WordPress theme designed and developed specifically for OKCMAR Foundation.
+	Version: 2.0
+*/
+
+// Partials
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "globals";
+@import "wordpress";
+
+
+
+/*    Header
+-------------------------------------------------------------- */
+.header {box-shadow: 5px 0 5px rgba($black, .25); position: relative; z-index: 1000;
+	@media (max-width: $small-bp) {padding: 20px 0 0; text-align: center;}
+	.logo {display: block; position: absolute; top: 50%; left: 0; transform: translateY(-50%);
+		@media (max-width: $large-bp) {width: 150px;}
+		@media (max-width: $small-bp) {position: relative; top: 0; transform: none; margin: 0 auto 20px;}
+		&:hover {opacity: .8;}
+		img {display: block; width: 100%; height: auto;}
+	}
+	.nav-container {background: $link; padding: 40px 0 30px; position: relative; width: calc(100% - 333px);
+		@media (max-width: $large-bp) {width: calc(100% - 250px);}
+		@media (max-width: $med-bp) {padding: 20px 0;}
+		@media (max-width: $small-bp) {width: 100%;}
+		&:before {content: ""; background: $link; width: 60px; height: 100%; position: absolute; top: 0; left: -30px; transform: skew(-13deg); z-index: -1;
+			@media (max-width: $med-bp) {transform: none;}
+			@media (max-width: $small-bp) {transform: none;}
+		}
+		&:after {content: ""; background: $link; width: 1500px; height: 100%; display: block; position: absolute; top: 0; left: 100%;}
+		.contact-details {
+			@media (max-width: $small-bp) {float: none;}
+			a {display: inline-block; vertical-align: middle; line-height: 1em; position: relative; padding: 0 0 0 65px; font-size: 1.5rem;
+				@media (max-width: $med-bp) {display: block; font-size: 1rem; line-height: 1.5em; padding: 0 65px 0 0; text-align: right;}
+				@media (max-width: $small-bp) {display: inline-block; text-align: center; padding: 0; margin: 0 10px;}
+				&:before {display: block; position: absolute; top: calc(50% + 4px); left: 0; transform: translateY(-50%);
+					@media (max-width: $med-bp) {right: 0;}
+					@media (max-width: $small-bp) {display: none;}
+				}
+				span {color: $white; text-transform: uppercase; display: block; font-size: .8125rem; font-weight: 700; letter-spacing: 2px;}
+				&.email {font-weight: 700; color: $light-blue; padding: 0 40px 0 65px; margin: 0 40px 0 0; border-right: 1px solid $blue-2;
+					@media (max-width: $med-bp) {padding: 0 65px 0 0; border: none; margin: 0 0 10px;}
+					@media (max-width: $small-bp) {margin: 0 10px; padding: 0;}
+					&:before {content: url(images/mail.png);}
+				}
+				&.phone {color: $orange-2;
+					&:before {content: url(images/phone.png);}
+				}
+			}
+		}
+	}
+}
+
+
+
+/*    Header > Navigation
+-------------------------------------------------------------- */
+.menu-link {display: none; color: $white; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-top: 1px solid $blue-2; margin: 25px 0 0; padding: 20px 0 0;
+	@media screen and (max-width: $med-bp) {display: block; margin: 15px 0 0; padding: 10px 0 0;}
+	@media (max-width: $small-bp) {float: none;}
+}
+.nav {border-top: 1px solid $blue-2; margin: 25px 0 0; padding: 20px 0 0;
+	@media screen and (max-width: $med-bp) {clear: both; min-width: inherit; float: none; overflow: hidden; max-height: 0; margin: 0; padding: 0; border: none;
+		&.active {max-height: 100%;}
+		li.menu-item-has-children > a.active:after {content: "-";}
+	}
+	ul {list-style: none; position: relative;
+		@media screen and (max-width: $med-bp) {display: inline;}
+		&:after {content: ""; clear: both; display: block;}
+		li {display: inline-block; margin: 0 100px 0 0;
+			@media (max-width: 1400px) {margin: 0 50px 0 0;}
+			@media (max-width: $large-bp) {margin: 0 33px 0 0;}
+			@media screen and (max-width: $med-bp) {display: block; margin: 0;}
+			&:last-child {margin: 0;}
+			&.menu-item-has-children > a:after {content: url(images/dropdown-arrow.png); display: inline-block; vertical-align: middle; margin: 0 0 0 8px; position: relative; top: -4px;}
+			a {color: $white; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+				@media screen and (max-width: $med-bp) {display: block; padding: 10px; border-bottom: 1px solid $white; position: relative;}
+				&:hover {color: $orange;}
+			}
+			&:hover > ul {display: block;}
+			> & > ul.sub-menu {width: 100%; padding: 4px 0;
+				@media screen and (max-width: $med-bp) {padding: 0px;}
+			}
+		}
+		ul {background: $link; display: none; position: absolute; top:100%; min-width: 300px; padding: 20px; margin: 0 0 0 -40px;
+			@media screen and (max-width: $med-bp) {overflow: hidden; max-height: 0; display: inherit; position: relative; left: auto; top:auto; box-shadow: none; border:none; padding: 0; margin: 0;
+				&.active {max-height: 100%;}
+			}
+			&> li {position: relative; display: block; margin: 0;
+				a {padding: 10px 20px; height: auto;}
+			}
+			ul {position: absolute; left: 100%; top:0;
+				@media screen and (max-width: $med-bp) {display: inherit; position: relative; left: auto; top:auto; border:none;}
+			}
+		}
+	}
+}
+
+
+
+/*    Hero
+-------------------------------------------------------------- */
+.hero {background-size: cover; background-position: center center; padding: 300px 0 100px;
+	@media (max-width: $small-bp) {padding: 150px 0 60px;}
+	h2 {background: rgba($blue, .7); display: inline-block; color: $white; font-size: 1.5625rem; font-weight: 400; padding: 10px; margin: 0 0 5px;}
+	h1 {background: rgba($text-color, .7); display: inline-block; color: $white; font-size: 3.75rem; padding: 10px 15px; margin: 0 0 40px;
+		@media (max-width: $small-bp) {font-size: 2.5rem;}
+	}
+}
+
+
+
+/*    Home Content
+-------------------------------------------------------------- */
+.home .content {font-size: 1.25rem; line-height: 2rem;}
+
+
+
+/*    Callout
+-------------------------------------------------------------- */
+.callout {background: $blue; position: relative; color: $white;
+	.image {background-size: cover; background-position: center center; position: absolute; top: 0; left: 0; width: 50%; height: 100%;
+		@media (max-width: $med-bp) {position: relative; width: 100%; height: 400px;}
+	}
+	.content {padding: 90px 0;
+		.sub-content {width: 50%; padding: 0 0 0 55px;
+			@media (max-width: $med-bp) {width: 100%; float: none; padding: 0;}
+			h1, h2, h3 {color: $white;}
+			a {@extend .button; background: $white; color: $blue; margin: 0 20px 10px 0;
+				&:before {display: none;}
+				&:hover {background: $orange; color: $white;}
+			}
+		}
+	}
+}
+
+
+
+/*    Content
+-------------------------------------------------------------- */
+.content {padding: 110px 0 80px;
+	h1 {margin: 0 0 40px;}
+	h2, h3, h4, h5, h6 {margin: 0 0 20px;}
+	p, form, iframe, blockquote, hr {margin: 0 0 30px;}
+	ol, ul {margin: 0 0 30px 30px;}
+	ul {
+		li {list-style: url(images/bullet.png);}
+	}
+	iframe {max-width: 100%;}
+	img {max-width: 100%; height: auto;
+		@media (max-width: $small-bp) {float: none; display: block; margin: 0 auto 20px;}
+	}
+	.feat-img {
+		img {display: block; margin: 0 auto 30px;}
+	}
+}
+
+
+
+/*    Members
+-------------------------------------------------------------- */
+.content .member {background: $light-grey; padding: 25px 25px 25px 240px; border: 1px solid $light-grey-2; width: calc(50% - 25px); height: 275px; float: left; margin: 0 0 50px; position: relative;
+	@media (max-width: $med-bp) {width: 600px; max-width: 100%; float: none; margin: 0 auto 50px;}
+	@media (max-width: $small-bp) {padding: 25px; height: auto; text-align: center;}
+	&:nth-of-type(odd) {float: right;
+		@media (max-width: $med-bp) {float: none;}
+	}
+	.image {background-size: cover; background-position: center center; width: 190px; height: 225px; position: absolute; top: 25px; left: 25px;
+		@media (max-width: $small-bp) {position: relative; top: 0; left: 0; margin: 0 auto 25px;}
+	}
+	h3 {font-size: 1.25rem; line-height: 1.875rem;
+		&:after {content: ""; background: $orange; width: 50px; height: 1px; display: block; margin: 20px 0 0;
+			@media (max-width: $small-bp) {margin: 20px auto 0;}
+		}
+	}
+	p {margin: 0;}
+	&.event {
+		&:nth-of-type(even) {float: right;
+			@media (max-width: $med-bp) {float: none;}
+		}
+		&:nth-of-type(odd) {float: left;
+			@media (max-width: $med-bp) {float: none;}
+		}
+		a {color: $h3; line-height: 1.5rem;}
+		p {font-size: .875rem; font-weight: 700;}
+		.image {display: block;
+			&:hover {opacity: .8;}
+		}
+	}
+	&.past-event {background: none; overflow: hidden;
+		&:nth-of-type(even) {float: right;
+			@media (max-width: $med-bp) {float: none;}
+		}
+		&:nth-of-type(odd) {float: left;
+			@media (max-width: $med-bp) {float: none;}
+		}
+		h3 {margin: 0;
+			&:after {display: none;}
+		}
+		a {color: $h3; line-height: 1.5rem;}
+		p {font-size: .875rem; font-weight: 700;}
+		.image {display: block;
+			&:hover {opacity: .8;}
+		}
+		.excerpt {
+			p {font-weight: 400; line-height: 1.375rem; max-height: 130px; overflow: hidden;
+				&:nth-of-type(2) {display: none;}
+			}
+		}
+	}
+}
+
+
+
+/*    Events
+-------------------------------------------------------------- */
+.upcoming-events {
+	.main {width: calc(100% - 295px); border-left: 5px solid $light-grey-3; padding: 0 0 0 50px;
+		@media (max-width: $med-bp) {width: 100%; border-left: none; border-bottom: 5px solid $light-grey-3; padding: 0 0 50px; margin: 0 0 50px; float: none;}
+		.upcoming-event {font-size: 1rem; line-height: 1.5rem;
+			&:nth-of-type(1) {display: block;}
+			h3 {color: $text-color; text-transform: none; font-size: 1.25rem; margin: 0;}
+			.details {color: $blue;}
+			.button {line-height: $line-height; margin: 20px 0 40px;}
+		}
+		.view-more {color: $orange; font-size: .8125rem; letter-spacing: 2px; font-weight: 700; text-transform: uppercase; margin: 0 40px 0 0; display: inline-block; vertical-align: middle;
+			&:hover {color: $orange-2;}
+			&:after {content: ""; border: 5px solid transparent; border-left-color: $orange; display: inline-block; vertical-align: middle; margin: 0 0 0 5px; position: relative; top: -2px;}
+		}
+	}
+	aside {width: 250px;
+		@media (max-width: $med-bp) {float: none; margin: 0 auto;}
+		.upcoming-event {font-size: 1rem; line-height: 1.5rem; padding: 0 0 40px; margin: 0 0 50px; border-bottom: 1px dotted $text-color;
+			&:nth-of-type(2), &:nth-of-type(3) {display: block;}
+			&:nth-of-type(3) {border: none; padding: 0; margin: 0;}
+			h3 {color: $text-color; text-transform: none; font-size: 1rem; margin: 0;}
+			p {margin: 0 0 10px;}
+			a {color: $link; font-size: .8125rem; letter-spacing: 2px; font-weight: 700; text-transform: uppercase; display: inline-block; vertical-align: middle;
+				&:hover {color: $link-hover;}
+				&:after {content: ""; border: 5px solid transparent; border-left-color: $link; display: inline-block; vertical-align: middle; margin: 0 0 0 5px; position: relative; top: -2px;}
+			}
+		}
+	}
+}
+
+
+
+/*    Footer
+-------------------------------------------------------------- */
+.footer {background: $blue; text-align: center; padding: 40px 0; color: $white; font-size: .8125rem;
+	@media (max-width: $med-bp) {
+		.left, .right {float: none;}
+	}
+	.footer-nav {
+		ul {
+			li {display: inline-block; margin: 0 50px 0 0;
+				@media (max-width: $small-bp) {margin: 0 15px;}
+				&:last-child {margin: 0;
+					@media (max-width: $small-bp) {margin: 0 15px;}
+				}
+				a {color: $white; text-transform: uppercase; letter-spacing: 2px;
+					&:hover {color: $link-hover;}
+				}
+			}
+		}
+	}
+	.copy {
+		a {font-family: $secondary-font; color: $light-blue;
+			&:hover {color: $orange;}
+		}
+	}
+}
