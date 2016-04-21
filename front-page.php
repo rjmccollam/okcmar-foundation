@@ -16,6 +16,16 @@
 
 	</div><!-- end container -->
 
+	<ul class="slider">
+		
+		<?php if( have_rows('slides') ): while ( have_rows('slides') ) : the_row(); ?>
+
+			<li style="background-image: url(<?php the_sub_field('slide'); ?>);"></li>
+
+   		<?php  endwhile; endif; ?>
+
+	</ul>
+
 </section><!-- end hero -->
 
 <section class="content container clearfix">

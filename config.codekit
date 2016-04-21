@@ -131,12 +131,12 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/js\/retina1.3.js": {
+	"\/js\/jquery.bxslider.js": {
 		"fileType": 64,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/js\/retina1.3.js",
-		"outputAbbreviatedPath": "\/js\/min\/retina1.3-min.js",
+		"inputAbbreviatedPath": "\/js\/jquery.bxslider.js",
+		"outputAbbreviatedPath": "\/js\/min\/jquery.bxslider-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -366,6 +366,14 @@
 	],
 "lastSavedByUser": "RJ McCollam",
 "manualImportLinks": {
+	"\/js\/scripts.js": [
+		{
+			"followForSyntaxChecking": 1,
+			"linkedFileAbbreviatedPath": "\/js\/jquery.bxslider.js",
+			"position": 0,
+			"type": 0
+			}
+		]
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",

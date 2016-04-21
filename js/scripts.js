@@ -14,3 +14,11 @@ $menuTrigger.click(function(e) {
 	var $this = $(this);
 	$this.toggleClass('active').next('ul').toggleClass('active');
 });
+
+// Hero Slider
+$('.slider').bxSlider({
+	mode: 'fade',
+	auto: true,
+	pager: false,
+	controls: false
+});
