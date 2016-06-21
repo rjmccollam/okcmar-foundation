@@ -36,6 +36,7 @@
 		.contact-details {
 			@media (max-width: $small-bp) {float: none;}
 			a {display: inline-block; vertical-align: middle; line-height: 1em; position: relative; padding: 0 0 0 65px; font-size: 1.5rem;
+				@media (max-width: $large-bp) {padding: 0 0 0 50px;}
 				@media (max-width: $med-bp) {display: block; font-size: 1rem; line-height: 1.5em; padding: 0 65px 0 0; text-align: right;}
 				@media (max-width: $small-bp) {display: inline-block; text-align: center; padding: 0; margin: 0 10px;}
 				&:before {display: block; position: absolute; top: calc(50% + 4px); left: 0; transform: translateY(-50%);
@@ -44,12 +45,22 @@
 				}
 				span {color: $white; text-transform: uppercase; display: block; font-size: .8125rem; font-weight: 700; letter-spacing: 2px;}
 				&.email {font-weight: 700; color: $light-blue; padding: 0 40px 0 65px; margin: 0 40px 0 0; border-right: 1px solid $blue-2;
+					@media (max-width: $large-bp) {padding: 0 10px 0 50px; margin: 0 10px 0 0;}
 					@media (max-width: $med-bp) {padding: 0 65px 0 0; border: none; margin: 0 0 10px;}
 					@media (max-width: $small-bp) {margin: 0 10px; padding: 0;}
 					&:before {content: url(images/mail.png);}
 				}
-				&.phone {color: $orange-2;
+				&.phone {color: $orange-2; border-right: 1px solid $blue-2; padding: 0 40px 0 65px;
+					@media (max-width: $large-bp) {padding: 0 10px 0 50px;}
+					@media (max-width: $med-bp) {padding: 0 65px 0 0; border: none; margin: 0 0 10px;}
+					@media (max-width: $small-bp) {margin: 0 10px 10px; padding: 0;}
 					&:before {content: url(images/phone.png);}
+				}
+				&.facebook {padding: 0 0 0 20px;
+					@media (max-width: $large-bp) {padding: 0 0 0 10px;}
+					@media (max-width: $small-bp) {padding: 0;}
+					&:hover {opacity: .8;}
+					img {display: inline-block; max-width: 100%; height: auto;}
 				}
 			}
 		}

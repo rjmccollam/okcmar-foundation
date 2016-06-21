@@ -30,6 +30,8 @@
 
 				<a href="tel:<?php the_field('phone_number', 'option'); ?>" class="phone"><span>Call Us</span><?php the_field('phone_number', 'option'); ?></a>
 
+				<a href="https://www.facebook.com/okcmarfoundation" class="facebook"><img src="<?php bloginfo('template_url'); ?>/images/facebook.png" alt="Facebook"></a>
+
 			</div>
 
 			<div class="clear"></div>
