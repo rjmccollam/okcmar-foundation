@@ -175,6 +175,11 @@
 	.feat-img {
 		img {display: block; margin: 0 auto 30px;}
 	}
+	form {
+		input[type=submit] {border: none; outline: none; padding: 0; cursor: pointer; -webkit-appearance: none; @include transition(all);
+			&:hover {@include transition(all);}
+		}
+	}
 }
 
 
