@@ -201,17 +201,25 @@
 		}
 	}
 	p {margin: 0;}
-	&.event {
+	&.event {overflow: hidden;
 		&:nth-of-type(even) {float: right;
 			@media (max-width: $med-bp) {float: none;}
 		}
 		&:nth-of-type(odd) {float: left;
 			@media (max-width: $med-bp) {float: none;}
 		}
+		h3 {margin: 0;
+			&:after {display: none;}
+		}
 		a {color: $h3; line-height: 1.5rem;}
 		p {font-size: .875rem; font-weight: 700;}
 		.image {display: block;
 			&:hover {opacity: .8;}
+		}
+		.excerpt {
+			p {font-weight: 400; line-height: 1.375rem; max-height: 130px; overflow: hidden;
+				&:nth-of-type(2) {display: none;}
+			}
 		}
 	}
 	&.past-event {background: none; overflow: hidden;

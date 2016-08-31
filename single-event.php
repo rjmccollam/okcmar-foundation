@@ -13,7 +13,23 @@
 
 		?>
 
-		<h2><?php echo date_i18n($dateformatstring, $unixtimestamp); ?></h2>
+		<h2>
+
+			<?php
+
+				if ( get_field('date_range') ) {
+					
+					the_field('date_range');
+
+				} else {
+
+					echo date_i18n($dateformatstring, $unixtimestamp);
+
+				}
+
+			?>		
+
+		</h2>
 
 		<p class="feat-img"><?php the_post_thumbnail(); ?></p>
 

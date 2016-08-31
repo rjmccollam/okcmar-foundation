@@ -1,6 +1,13 @@
 {
-"CodeKitInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and\/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https:\/\/codekitapp.com",
-"creatorBuild": "24306",
+"AAInfo": "This is a CodeKit 3 project config file. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. Doing so will cause CodeKit to crash and\/or corrupt your project. I know it looks like JSON, but it is *not*. Many numbers in this file are 64-bit long long bitFlags, which JSON does not support. These numbers *cannot* be treated as discrete values and if you attempt to parse this file as standard JSON with any public JSON parser, these values will be corrupted. This file is not backwards-compatible with CodeKit 1 or 2. For more information, see https:\/\/codekitapp.com",
+"buildSteps": [
+	{
+		"name": "Process All Remaining Files and Folders",
+		"stepType": 1,
+		"uuidString": "51751890-9BFF-4B8B-847F-D2205ACE3C4F"
+		}
+	],
+"creatorBuild": "24856",
 "files": {
 	"\/404.php": {
 		"ft": 8192,
@@ -12,18 +19,6 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/archive.php",
-		"oF": 0
-		},
-	"\/codekit3.config": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/codekit3.config",
-		"oF": 0
-		},
-	"\/config.codekit": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/config.codekit",
 		"oF": 0
 		},
 	"\/footer.php": {
@@ -307,6 +302,7 @@
 	"iconImageName": "meme-fry"
 	},
 "projectSettings": {
+	"abortBuildOnError": 1,
 	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoprefixerBrowserString": "> 1%, last 2 versions, ff 17, opera 12.1",
@@ -483,6 +479,9 @@
 		"react-jsx-compat": {
 			"active": 0
 			},
+		"react-jsx-self": {
+			"active": 0
+			},
 		"react-jsx-source": {
 			"active": 0
 			},
@@ -564,6 +563,7 @@
 	"browserRefreshDelay": 0,
 	"buildFolderActive": 0,
 	"buildFolderName": "build",
+	"cleanBuild": 1,
 	"coffeeLintFlags2": {
 		"arrow_spacing": {
 			"active": 0,
@@ -702,6 +702,7 @@
 			"flagValue": -1
 			}
 		},
+	"esLintConfigFileHandlingType": 1,
 	"esLintEnvironmentsMask": 1,
 	"esLintRules": {
 		"accessor-pairs": {
@@ -876,6 +877,10 @@
 			"active": 0,
 			"optionString": "{'code': 80, 'comments': 80, 'tabWidth': 4, 'ignoreUrls': true}"
 			},
+		"max-lines": {
+			"active": 0,
+			"optionString": "{'max': 300, 'skipBlankLines': true, 'skipComments': true}"
+			},
 		"max-nested-callbacks": {
 			"active": 0,
 			"optionString": "{'max': 10}"
@@ -887,6 +892,10 @@
 		"max-statements": {
 			"active": 0,
 			"optionString": "{'max': 10}, {'ignoreTopLevelFunctions': true}"
+			},
+		"multiline-ternary": {
+			"active": 0,
+			"optionString": ""
 			},
 		"new-cap": {
 			"active": 0,
@@ -1119,6 +1128,10 @@
 		"no-magic-numbers": {
 			"active": 0,
 			"optionString": "{'ignore': [], 'ignoreArrayIndexes': true, 'enforceConst': false, 'detectObjects': false}"
+			},
+		"no-mixed-operators": {
+			"active": 0,
+			"optionString": "{'groups': [['+', '-', '*', '\/', '%', '**'], ['&', '|', '^', '~', '<<', '>>', '>>>'], ['==', '!=', '===', '!==', '>', '>=', '<', '<='], ['&&', '||'], ['in', 'instanceof']], 'allowSamePrecedence': true}"
 			},
 		"no-mixed-requires": {
 			"active": 0,
@@ -1368,6 +1381,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-useless-rename": {
+			"active": 0,
+			"optionString": "{'ignoreDestructuring': false, 'ignoreImport': false, 'ignoreExport': false}"
+			},
 		"no-var": {
 			"active": 0,
 			"optionString": ""
@@ -1387,6 +1404,10 @@
 		"no-with": {
 			"active": 0,
 			"optionString": ""
+			},
+		"object-curly-newline": {
+			"active": 0,
+			"optionString": "{'ObjectExpression': {'multiline': true}, 'ObjectPattern': {'multiline': true}}"
 			},
 		"object-curly-spacing": {
 			"active": 0,
@@ -1464,6 +1485,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"rest-spread-spacing": {
+			"active": 0,
+			"optionString": "'never'"
+			},
 		"semi": {
 			"active": 0,
 			"optionString": "'always', {'omitLastInOneLineBlock': false}"
@@ -1512,6 +1537,10 @@
 			"active": 0,
 			"optionString": "'never'"
 			},
+		"unicode-bom": {
+			"active": 0,
+			"optionString": "'never'"
+			},
 		"use-isnan": {
 			"active": 1,
 			"optionString": ""
@@ -1546,6 +1575,7 @@
 			}
 		},
 	"externalServerAddress": "http:\/\/okcmar-foundation-new.dev:8888\/",
+	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",
 	"jsHintFlags2": {
 		"asi": {
